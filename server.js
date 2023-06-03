@@ -4,7 +4,6 @@ const app = express();
 const path = require("path");
 const cors = require("cors");
 const corsOptions = require("./config/corsOptions");
-const { sequelize } = require("./config/dbConn");
 const { logger } = require("./middleware/logEvents");
 const verifyJWT = require("./middleware/verifyJWT");
 const errorHandler = require("./middleware/errorHandler");
@@ -31,8 +30,9 @@ app.use(express.json());
 app.use("/", express.static(path.join(__dirname, "/public")));
 
 // routes
+app.use("/car", require("./routes/api/cars"));
 
-app.use(verifyJWT);
+// app.use(verifyJWT);
 
 app.all("*", (req, res) => {
     res.status(404);
@@ -47,10 +47,5 @@ app.all("*", (req, res) => {
 
 app.use(errorHandler);
 
-sequelize
-    .authenticate()
-    .then(() =>
-        app.listen(PORT, () => console.log(`Server is running on port ` + PORT))
-    )
-    .catch((err) => console.log(err));
 // listening server
+app.listen(PORT, () => console.log(`Server is running on port ` + PORT));

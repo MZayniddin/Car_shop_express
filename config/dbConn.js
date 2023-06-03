@@ -1,15 +1,14 @@
-const { Sequelize, DataTypes } = require("sequelize");
+const mongoose = require("mongoose");
 
-const sequelize = new Sequelize({
-    username: process.env.DB_USER,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,  
-    dialect: "postgres",
-});
-
-module.exports = {
-    sequelize,
-    DataTypes,
+const connectDB = async () => {
+    try {
+        await mongoose.connect(process.env.DATABASE_URI, {
+            useUnifiedTopology: true,
+            useNewUrlParser: true,
+        });
+    } catch (err) {
+        console.error(err);
+    }
 };
+
+module.exports = connectDB;
