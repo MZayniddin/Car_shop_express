@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 4000;
 // CONNECT TO MONGODB
 connectDB();
 
-// custom middleware logger
+// CUSTOM MIDDLEWARE LOGGER
 app.use(logger);
 
 // Handle options credentials check - before CORS!
@@ -34,8 +34,9 @@ app.use(express.json());
 // serve static files
 app.use("/", express.static(path.join(__dirname, "/public")));
 
-// routes
+// ROUTES
 app.use("/car", require("./routes/api/cars"));
+app.use("/brand", require("./routes/api/brands"));
 
 // app.use(verifyJWT);
 
