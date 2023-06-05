@@ -35,6 +35,8 @@ app.use(express.json());
 app.use("/", express.static(path.join(__dirname, "/public")));
 
 // ROUTES
+app.use("/user", require("./routes/user"));
+
 app.use("/car", require("./routes/api/cars"));
 app.use("/brand", require("./routes/api/brands"));
 

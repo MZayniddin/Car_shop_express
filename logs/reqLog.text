@@ -80,3 +80,17 @@
 20230604	11:46:06	97cc12bb-ff36-4298-95cb-9fb855b4cc4c	DELETE	undefined	/car/647c2804a7673afa5b1fc35d
 20230604	11:46:12	fd272d07-0cb7-45b1-809e-5d3b275bf1b3	DELETE	undefined	/car/647c2846a7673afa5b1fc362
 20230604	11:46:14	f5fd726a-0d6b-4b97-9b5e-1244a9ddea70	GET	undefined	/car/
+20230604	12:09:39	ca38a4fe-381e-4205-9cb5-66e6a61f8e8f	GET	undefined	/user/register
+20230604	12:10:08	68670f03-aa70-4a5d-9fe8-bf44a1539390	GET	undefined	/user/register
+20230604	12:12:28	2ff5d106-095f-4b82-8c48-f74cd96718e6	POST	undefined	/user/register
+20230604	12:13:19	69a7978f-1816-4e8f-9c4a-1b7d69249ddd	POST	undefined	/user/register
+20230604	12:13:40	1625d4e4-399a-4d03-9bf3-fec8fa857c7c	POST	undefined	/user/register
+20230604	17:24:28	d54013d5-d949-4172-93bc-2ab909f94dad	POST	undefined	/user/login
+20230604	17:24:49	f1db3772-32a6-4f07-9258-d41b764c2688	POST	undefined	/user/login
+20230604	17:25:00	3572bb0b-3822-4ce1-9f47-5e4d550b9ca7	POST	undefined	/user/login
+20230604	17:25:18	6749f4cc-4013-4221-8f6b-75216c8dc937	POST	undefined	/user/login
+20230604	17:26:19	4a6c63c5-c82b-45f4-83ff-1a446e8e7e40	POST	undefined	/user/login
+20230604	17:26:55	62222a48-243a-4518-b7f0-a44cd218fd8b	POST	undefined	/user/login
+20230604	17:27:05	d298b5d8-4594-4ed4-bfba-5933e5e2f243	POST	undefined	/user/login
+20230604	17:27:10	835e2fad-6805-44af-b5d3-6d476b5f038b	POST	undefined	/user/login
+20230604	17:27:17	a053dcbe-3c97-409a-917a-43f82d70cddf	POST	undefined	/user/login
