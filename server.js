@@ -37,10 +37,9 @@ app.use("/", express.static(path.join(__dirname, "/public")));
 // ROUTES
 app.use("/user", require("./routes/user"));
 
+app.use(verifyJWT);
 app.use("/car", require("./routes/api/cars"));
 app.use("/brand", require("./routes/api/brands"));
-
-// app.use(verifyJWT);
 
 app.all("*", (req, res) => {
     res.status(404);

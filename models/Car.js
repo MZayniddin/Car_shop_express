@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const CarSchema = new Schema({
     name: { type: String, required: true },
-    brand: { type: mongoose.Types.ObjectId, ref: "Brand" },
+    brand: { type: Schema.Types.ObjectId, ref: "Brand" },
     transmission: { type: String, required: true },
     price: { type: Number, required: true },
     toning: { type: Boolean, default: false },
@@ -16,4 +16,4 @@ const CarSchema = new Schema({
     createdAt: { type: Date, default: new Date() },
 });
 
-module.exports = mongoose.model("Car", CarSchema);
+module.exports = mongoose.models.Car || mongoose.model("Car", CarSchema);

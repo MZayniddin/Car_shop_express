@@ -3,7 +3,24 @@ const Car = require("../models/Car");
 
 exports.getAllCars = async (req, res) => {
     try {
-        res.json(await Car.find());
+        res.json(
+            await Car.aggregate([
+                {
+                    $lookup: {
+                        from: "brands",
+                        localField: "brand",
+                        foreignField: "_id",
+                        as: "brand",
+                    },
+                },
+                {
+                    $unwind: {
+                        path: "$brand", // given name
+                        preserveNullAndEmptyArrays: true,
+                    },
+                },
+            ])
+        );
     } catch (error) {
         res.json({ message: error.message });
     }

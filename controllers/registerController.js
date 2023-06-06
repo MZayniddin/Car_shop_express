@@ -43,7 +43,7 @@ const handleRegister = async (req, res) => {
             }
         );
 
-        res.status(201).json({ user: newUser, accessToken });
+        res.status(201).json({ result: newUser, accessToken });
     } catch (error) {
         res.json({ message: error.message });
     }
