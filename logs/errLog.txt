@@ -1,2 +1,4 @@
 20230604	11:44:40	4575e15f-d844-4d5a-80bf-f24c2ce49d2c	SyntaxError: Unexpected token c in JSON at position 37
 20230604	17:24:49	d044410f-6c96-427c-bf12-299093b7cc54	SyntaxError: Unexpected token } in JSON at position 13
+20230605	19:25:55	74e13fe4-7119-4599-a642-56bea0314d1d	Error: Not allowed by CORS
+20230605	19:26:01	797413f4-1caf-4f77-b1ca-053b9abda472	Error: Not allowed by CORS

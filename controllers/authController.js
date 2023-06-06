@@ -50,7 +50,8 @@ const handleLogin = async (req, res) => {
             sameSite: "None",
             maxAge: 24 * 60 * 60 * 100,
         });
-        res.json({ accessToken });
+
+        res.json({ result: foundUser, accessToken });
     } catch (error) {
         res.json({ message: error.message });
     }
