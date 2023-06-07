@@ -9,4 +9,6 @@ router
     .put(verifyRoles(ROLES_LIST.Admin), carsController.updateCar)
     .delete(verifyRoles(ROLES_LIST.Admin), carsController.deleteCar);
 
+router.patch("/like/:id", carsController.likeCar)
+
 module.exports = router;

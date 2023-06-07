@@ -65,3 +65,26 @@ exports.deleteCar = async (req, res) => {
         res.json({ message: error.message });
     }
 };
+
+exports.likeCar = async (req, res) => {
+    const { id } = req.params;
+    if (!req.user) return res.status(400).json({ message: "Unauthenticated" });
+
+    if (!mongoose.Types.ObjectId.isValid(id))
+        return res.status(404).send("No post with that id");
+
+    const car = await Car.findById(id);
+    const index = car.likes.findIndex((id) => id === String(req.user));
+
+    if (index === -1) {
+        car.likes.push(req.user);
+    } else {
+        car.likes = car.likes.filter((id) => id !== String(req.user));
+    }
+
+    const updatedCar = await Car.findByIdAndUpdate(id, car, {
+        new: true,
+    });
+
+    res.json(updatedCar);
+};

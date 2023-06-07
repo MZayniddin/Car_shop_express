@@ -2,3 +2,5 @@
 20230604	17:24:49	d044410f-6c96-427c-bf12-299093b7cc54	SyntaxError: Unexpected token } in JSON at position 13
 20230605	19:25:55	74e13fe4-7119-4599-a642-56bea0314d1d	Error: Not allowed by CORS
 20230605	19:26:01	797413f4-1caf-4f77-b1ca-053b9abda472	Error: Not allowed by CORS
+20230606	20:01:18	45ea6b5c-34c3-4c35-800d-51a60b667f25	PayloadTooLargeError: request entity too large
+20230606	20:35:43	18cd7fe4-38db-4e12-8280-f284d8b82b98	PayloadTooLargeError: request entity too large

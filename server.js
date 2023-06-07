@@ -10,6 +10,7 @@ const errorHandler = require("./middleware/errorHandler");
 const credentials = require("./middleware/credentials");
 const mongoose = require("mongoose");
 const connectDB = require("./config/dbConn");
+const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 4000;
 
 // CONNECT TO MONGODB
@@ -34,8 +35,13 @@ app.use(express.json());
 // serve static files
 app.use("/", express.static(path.join(__dirname, "/public")));
 
+// middleware for cookies
+app.use(cookieParser());
+
 // ROUTES
 app.use("/user", require("./routes/user"));
+app.use("/refresh", require("./routes/refresh"));
+app.use("/logout", require("./routes/logout"));
 
 app.use(verifyJWT);
 app.use("/car", require("./routes/api/cars"));

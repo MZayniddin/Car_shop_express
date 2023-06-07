@@ -9,6 +9,10 @@ const CarSchema = new Schema({
     toning: { type: Boolean, default: false },
     motor: { type: String, required: true },
     year: { type: Number, required: true },
+    likes: {
+        type: [String],
+        default: [],
+    },
     color: { type: String, required: true },
     description: { type: String, required: true },
     images: [{ type: String }],
