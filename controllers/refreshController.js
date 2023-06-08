@@ -10,18 +10,19 @@ const handleRefreshToken = async (req, res) => {
     if (!foundUser) return res.sendStatus(403); // Forbidden
     // evaluate jwt
     jwt.verify(refreshToken, process.env.REFRESH_SECRET_KEY, (err, decoded) => {
-        // if (err || foundUser.username !== decoded.username)
-        //     return res.sendStatus(403);
+        if (err || foundUser.email !== decoded.email)
+            return res.sendStatus(403);
         const roles = Object.values(foundUser.roles);
         const accessToken = jwt.sign(
             {
                 UserInfo: {
-                    username: decoded.username,
+                    id: decoded.id,
+                    email: decoded.email,
                     roles: roles,
                 },
             },
             process.env.ACCESS_SECRET_KEY,
-            { expiresIn: "1m" }
+            { expiresIn: process.env.ACCESS_TIME }
         );
         res.json({ accessToken });
     });

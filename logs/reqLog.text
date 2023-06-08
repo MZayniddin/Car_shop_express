@@ -1099,3 +1099,17 @@
 20230608	12:18:28	5bc9a5f2-26fe-4eb6-bbb5-1b98c1d64aaa	GET	undefined	/user/refresh
 20230608	12:18:29	672a197e-807f-42e8-8669-4e2fcb860244	GET	undefined	/user/refresh
 20230608	12:21:52	83aa7250-863a-4b36-a342-1742287e3daa	GET	undefined	/user/logout
+20230608	15:30:18	d4623b0a-e375-4a52-b7cc-cc99a613fc5e	POST	undefined	/cart/12
+20230608	15:30:24	b60ca094-58d9-4836-898e-1da162302d4a	POST	undefined	/user/login
+20230608	15:30:37	64561db6-ca7f-4ce0-8a7a-1056d1115b6a	POST	undefined	/cart/12
+20230608	15:30:43	2aeab74b-f83a-499e-8888-c74c24e38a21	POST	undefined	/cart/122313
+20230608	15:32:06	ae598bbf-fda0-469e-a7f5-60df2060b324	POST	undefined	/cart/122313
+20230608	15:37:56	a63b8b6c-a4b2-486a-a651-812223a77adc	GET	undefined	/car/
+20230608	15:38:20	2bb08dc2-a602-4366-8526-08b901edb8e6	PATCH	undefined	/car/like/647efd5829518d8b86db11e4
+20230608	15:38:28	a6160bd4-1049-496e-846f-7b5d32c30cea	PATCH	undefined	/car/like/647efd5829518d8b86db11e4
+20230608	15:39:20	def9cc0f-1558-41b7-b482-ffc79de40e57	POST	undefined	/user/login
+20230608	15:39:34	fcbf0fd6-d46f-4bfd-b2ce-1e777ef65dc2	PATCH	undefined	/car/like/647efd5829518d8b86db11e4
+20230608	15:39:41	b3e2368c-efe8-42a1-9986-7a5b34899c44	PATCH	undefined	/car/like/647efd5829518d8b86db11e4
+20230608	15:39:42	8013cba6-8521-44f5-8af6-c0bc3d7d1cf6	PATCH	undefined	/car/like/647efd5829518d8b86db11e4
+20230608	15:39:56	142cccca-888c-401e-8ee4-9b80545f9e51	POST	undefined	/cart/122313
+20230608	15:40:11	c443d54f-b75b-4d98-89d4-deff0ca46024	POST	undefined	/cart/122313

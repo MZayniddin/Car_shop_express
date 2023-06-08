@@ -74,6 +74,8 @@ exports.likeCar = async (req, res) => {
         return res.status(404).send("No post with that id");
 
     const car = await Car.findById(id);
+    if (!car) return res.status(404).json({ message: "Car not found!" });
+    
     const index = car.likes.findIndex((id) => id === String(req.user));
 
     if (index === -1) {

@@ -25,7 +25,7 @@ const handleLogin = async (req, res) => {
         const roles = Object.values(foundUser.roles);
         const accessToken = jwt.sign(
             {
-                UserInfo: { email: foundUser.email, roles },
+                UserInfo: { id: foundUser._id, email: foundUser.email, roles },
             },
             process.env.ACCESS_SECRET_KEY,
             {
@@ -34,7 +34,7 @@ const handleLogin = async (req, res) => {
         );
         const refreshToken = jwt.sign(
             {
-                UserInfo: { email: foundUser.email, roles },
+                UserInfo: { id: foundUser._id, email: foundUser.email, roles },
             },
             process.env.REFRESH_SECRET_KEY,
             {
