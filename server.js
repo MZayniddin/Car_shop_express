@@ -40,8 +40,6 @@ app.use(cookieParser());
 
 // ROUTES
 app.use("/user", require("./routes/user"));
-app.use("/refresh", require("./routes/refresh"));
-app.use("/logout", require("./routes/logout"));
 
 app.use(verifyJWT);
 app.use("/car", require("./routes/api/cars"));
