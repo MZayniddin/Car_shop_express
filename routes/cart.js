@@ -1,7 +1,12 @@
 const router = require("express").Router();
 const cartCtr = require("../controllers/cartController");
 
-router.post("/:userId", cartCtr.addToCart);
-router.delete("/:carId", cartCtr.removeFromCart);
+router.get("/", cartCtr.getCart);
+
+router
+    .route("/:carId")
+    .patch(cartCtr.reduceFromCart)
+    .post(cartCtr.addToCart)
+    .delete(cartCtr.removeFromCart)
 
 module.exports = router;
