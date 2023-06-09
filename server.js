@@ -42,9 +42,10 @@ app.use(cookieParser());
 app.use("/user", require("./routes/user"));
 
 app.use(verifyJWT);
+app.use("/users", require("./routes/api/users"));
 app.use("/car", require("./routes/api/cars"));
 app.use("/brand", require("./routes/api/brands"));
-app.use("/cart", require("./routes/cart"));
+app.use("/cart", require("./routes/api/cart"));
 
 app.all("*", (req, res) => {
     res.status(404);

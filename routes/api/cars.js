@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const ROLES_LIST = require("../../config/roles_list");
 const carsController = require("../../controllers/carsController");
+const ROLES_LIST = require("../../config/roles_list");
 const verifyRoles = require("../../middleware/verifyRoles");
 
 router
